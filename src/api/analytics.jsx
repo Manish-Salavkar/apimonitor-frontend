@@ -84,3 +84,8 @@ export const formatAnalyticsForCharts = (analyticsData) => {
     };
   });
 };
+
+export const getUserUsageAnalytics = async () => {
+  const response = await api.get("/analytics/users/usage");
+  return response.data;
+};
